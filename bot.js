@@ -16,12 +16,12 @@ client.on("ready", () => {
 client.on("message", message => {
 
   console.log("Oui");
-  message.channel.send("Veuillez relire les règles s'il vous plaît!");
   guildBot = message.member.guild;
   newRole = guildBot.roles.find("name", "Touriste");
   modoRole = guildBot.roles.find("name", "Staff");
 
   if(message.author.bot) return;
+  message.channel.send("Veuillez relire les règles s'il vous plaît!");
 
   if(message.member.roles.has("235870151231143936")) {
     
