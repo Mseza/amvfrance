@@ -13,7 +13,7 @@ client.on("ready", () => {
 
 });
 
-client.on("message", message => 
+client.on("message", message => {
 
   console.log("Oui");
   guildBot = message.member.guild;
@@ -22,18 +22,19 @@ client.on("message", message =>
 
   if(message.author.bot) return;
   
+  if(message.channel.id === "676820473480216577"){
   
-  if(message.content === "J'ai lu et j'approuve le règlement"){
+    if(message.content === "J'ai lu et j'approuve le règlement"){
 
-      message.channel.bulkDelete(99);
-      //message.member.addRole(newRole);
-      message.channel.send('Lisez les règles !');
+        message.channel.bulkDelete(99);
+        //message.member.addRole(newRole);
+        message.channel.send('Lisez les règles !');
 
-    } else {
-     
-      message.channel.send("Veuillez relire les règles s'il vous plaît!");
-      
-    }
+      } else {
+
+        message.channel.send("Veuillez relire les règles s'il vous plaît!");
+
+      }
 
   if(message.member.roles.has("235870151231143936")) {
     
