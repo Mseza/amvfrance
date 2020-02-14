@@ -50,10 +50,6 @@ client.on("message", message => {
     }
 
   }
-    
-  //if(message.channel.id === "676820473480216577"){
-
-  //}
 
 });
 
