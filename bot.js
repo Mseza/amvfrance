@@ -22,6 +22,14 @@ client.on("message", message => {
 
   if(message.author.bot) return;
   message.channel.send("Veuillez relire les règles s'il vous plaît!");
+  
+  if(message.content === "J'ai lu et j'approuve le règlement"){
+
+      message.channel.bulkDelete(99);
+      //message.member.addRole(newRole);
+      message.channel.send('Lisez les règles !');
+
+    } 
 
   if(message.member.roles.has("235870151231143936")) {
     
@@ -39,17 +47,6 @@ client.on("message", message => {
   }
     
   //if(message.channel.id === "676820473480216577"){
-    if(message.content === "J'ai lu et j'approuve le règlement"){
-
-      message.channel.bulkDelete(99);
-      message.member.addRole(newRole);
-      message.channel.send('Lisez les règles !');
-
-    } else {
-
-      
-
-    }
 
   //}
 
