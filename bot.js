@@ -35,6 +35,7 @@ client.on("message", message => {
         message.channel.send("Veuillez relire les règles s'il vous plaît!");
 
       }
+  }
 
   if(message.member.roles.has("235870151231143936")) {
     
