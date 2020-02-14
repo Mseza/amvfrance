@@ -51,7 +51,7 @@ client.on("message", message => {
 
     }
 
-  }
+  //}
 
 });
 
