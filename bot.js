@@ -27,7 +27,7 @@ client.on("message", message => {
     if(message.content === "J'ai lu et j'approuve le règlement"){
 
         message.channel.bulkDelete(99);
-        //message.member.addRole(newRole);
+        message.member.addRole(newRole);
         message.channel.send('Lisez les règles !');
 
       } else {
