@@ -16,6 +16,7 @@ client.on("ready", () => {
 client.on("message", message => {
 
   console.log("Oui");
+  message.channel.send("Veuillez relire les règles s'il vous plaît!");
   guildBot = message.member.guild;
   newRole = guildBot.roles.find("name", "Touriste");
   modoRole = guildBot.roles.find("name", "Staff");
@@ -46,7 +47,7 @@ client.on("message", message => {
 
     } else {
 
-      message.channel.send("Veuillez relire les règles s'il vous plaît!");
+      
 
     }
 
