@@ -24,7 +24,7 @@ client.on("message", message => {
   
   if(message.channel.id === "676820473480216577"){
   
-    if(message.content === "VOUS NE PASSEREZ PAS ! (mais lisez quand même les règles svp)"){
+    if(message.content === "VOUS NE PASSEREZ PAS ! (mais lisez quand même les règles svp #règlement) "){
 
         message.channel.bulkDelete(99);
         message.member.addRole(newRole);
@@ -32,7 +32,7 @@ client.on("message", message => {
 
       } else {
 
-        message.channel.send("VOUS NE PASSEREZ PAS ! (mais lisez quand même les règles svp)");
+        message.channel.send("VOUS NE PASSEREZ PAS ! (mais lisez quand même les règles svp #règlement)");
 
       }
   }
