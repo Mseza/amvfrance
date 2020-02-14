@@ -15,6 +15,7 @@ client.on("ready", () => {
 
 client.on("message", message => {
 
+  console.log("Oui");
   guildBot = message.member.guild;
   newRole = guildBot.roles.find("name", "Touriste");
   modoRole = guildBot.roles.find("name", "Staff");
@@ -37,8 +38,6 @@ client.on("message", message => {
   }
     
   if(message.channel.id === "676820473480216577"){
-
-     console.log("Oui");
     if(message.content === "J'ai lu et j'approuve le règlement"){
 
       message.channel.bulkDelete(99);
