@@ -38,6 +38,7 @@ client.on("message", message => {
     
   if(message.channel.id === "676820473480216577"){
 
+     console.log("Oui");
     if(message.content === "J'ai lu et j'approuve le règlement"){
 
       message.channel.bulkDelete(99);
