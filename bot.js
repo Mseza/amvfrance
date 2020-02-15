@@ -24,15 +24,15 @@ client.on("message", message => {
   
   if(message.channel.id === "676820473480216577"){
   
-    if(message.content === "VOUS NE PASSEREZ PAS ! (mais lisez quand même les règles svp #règlement) "){
+    if(message.content === "J'ai lu et j'approuve le règlement"){
 
         message.channel.bulkDelete(99);
         message.member.addRole(newRole);
-        message.channel.send('Lisez les règles !');
+        message.channel.send('VOUS NE PASSEREZ PAS ! (Lisez le règlement');
 
       } else {
 
-        message.channel.send("VOUS NE PASSEREZ PAS ! (mais lisez quand même les règles svp #règlement)");
+        message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
 
       }
   }
@@ -42,7 +42,7 @@ client.on("message", message => {
     if(message.content === "!clear"){
     
       message.channel.bulkDelete(99);
-      message.channel.send("Lisez les règles !");
+      message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement");
       
     } else {
   
