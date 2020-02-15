@@ -28,7 +28,7 @@ client.on("message", message => {
 
         message.channel.bulkDelete(99);
         message.member.addRole(newRole);
-        message.channel.send('VOUS NE PASSEREZ PAS ! (Lisez le règlement');
+        message.channel.send('VOUS NE PASSEREZ PAS ! (Lisez le règlement)');
 
       } else {
 
@@ -42,7 +42,7 @@ client.on("message", message => {
     if(message.content === "!clear"){
     
       message.channel.bulkDelete(99);
-      message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement");
+      message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
       
     } else {
   
