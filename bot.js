@@ -40,7 +40,7 @@ client.on("message", message => {
 
   if(message.member.roles.has("235870151231143936")) {
     
-    if(message.content.startsWith === "!clear"){
+    if(message.content.startsWith("!clear")){
       
       number = message.content[7,8];
       if(number = ""){
@@ -48,7 +48,7 @@ client.on("message", message => {
         number = 99;
       
       }
-      message.channel.bulkDelete(99);
+      message.channel.bulkDelete(number);
       message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
       
     } else {
