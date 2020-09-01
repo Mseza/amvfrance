@@ -42,7 +42,7 @@ client.on("message", message => {
     
     if(message.content.startsWith === "!clear"){
       
-      number = message.content[8:9];
+      number = message.content[7,8];
       if(number = ""){
       
         number = 99;
