@@ -5,6 +5,7 @@ let guildBot = "";
 let newRole = "";
 let roleRules = "";
 let modoRole = "";
+let number = "";
 var membersRole = new Array();
 
 client.on("ready", () => {
@@ -39,9 +40,15 @@ client.on("message", message => {
 
   if(message.member.roles.has("235870151231143936")) {
     
-    if(message.content === "!clear"){
-    
-      message.channel.bulkDelete(99);
+    if(message.content.startsWith === "!clear"){
+      
+      number = message.content[8:];
+      if(number = ""){
+      
+        number = 99;
+      
+      }
+      message.channel.bulkDelete(number);
       message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
       
     } else {
