@@ -50,7 +50,11 @@ client.on("message", message => {
       
       }
       message.channel.bulkDelete(number);
-      message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
+      if(message.channel.id === "676820473480216577"){
+        
+        message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
+        
+      }
       
     } else {
   
