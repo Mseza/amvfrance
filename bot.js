@@ -42,7 +42,7 @@ client.on("message", message => {
     
     if(message.content.startsWith("!clear")){
       
-      number = message.content.substring(6,8);
+      number = message.content.substring(7,9);
       console.log(number);
       if(number === ""){
       
