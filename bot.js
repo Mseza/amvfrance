@@ -48,7 +48,7 @@ client.on("message", message => {
         number = 99;
       
       }
-      message.channel.bulkDelete(number);
+      message.channel.bulkDelete(99);
       message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
       
     } else {
