@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const guildBot = client.guilds.get('id');
 
-let guildBot = "";
 let newRole = "";
 let roleRules = "";
 let modoRole = "";
@@ -15,11 +15,8 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
-  
-  if (!message.guild) return
 
   console.log("Oui");
-  guildBot = message.member.guild;
   newRole = guildBot.roles.find("name", "Touriste");
   modoRole = guildBot.roles.find("name", "Staff");
 
