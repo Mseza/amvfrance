@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-var guild = client.guilds.cache.get(235865632149733377)
+var guild = client.guilds.cache.get('235865632149733377')
 let newRole = "";
 let roleRules = "";
 let modoRole = "";
