@@ -15,6 +15,8 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
+  
+  if (!message.guild) return
 
   console.log("Oui");
   guildBot = message.member.guild;
