@@ -1,12 +1,7 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
-let guildBot = "";
-let newRole = "";
-let roleRules = "";
-let modoRole = "";
 let number = "";
-var membersRole = new Array();
 
 client.on("ready", () => {
 
@@ -14,55 +9,52 @@ client.on("ready", () => {
 
 });
 
-client.on("message", message => {
+client.on('message', msg => {
+  if(msg.author.bot) return;
 
-  console.log("Oui");
-  var guildBot = message.guild;
-  newRole = guildBot.roles.find("name", "Touriste");
-  modoRole = guildBot.roles.find("name", "Staff");
+  let { cache } = msg.guild.roles;
+  let newRole = cache.find(role => role.name === "Touriste");
+  let modoRole = cache.find(role => role.name === "Staff");
 
-  if(message.author.bot) return;
-  
-  if(message.channel.id === "676820473480216577"){
-  
-    if(message.content === "J'ai lu et j'approuve le règlement"){
+  if(msg.channel.id === "676820473480216577"){
 
-        message.channel.bulkDelete(99);
-        message.member.addRole(newRole);
-        message.channel.send('VOUS NE PASSEREZ PAS ! (Lisez le règlement)');
+    if(msg.content==="J'ai lu et j'approuve le règlement"){
 
-      } else {
+      msg.member.roles.add(newRole);
+      msg.channel.bulkDelete(99);
+      msg.channel.send('VOUS NE PASSEREZ PAS ! (Lisez le règlement)');
+    } else {
 
-        message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
+        msg.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
 
       }
   }
 
-  if(message.member.roles.has("235870151231143936")) {
-    
-    if(message.content.startsWith("!clear")){
-      
-      number = message.content.substring(7,9);
+  if (modoRole){
+
+    if(msg.member.roles.cache.has(modoRole.id)){
+
+      if(msg.content.startsWith("!clear")){
+
+      number = msg.content.substring(7,9);
       console.log(number);
       if(number === ""){
-      
+
         number = 99;
-      
+
       }
-      message.channel.bulkDelete(number);
-      if(message.channel.id === "676820473480216577"){
-        
-        message.channel.send("VOUS NE PASSEREZ PAS ! (Lisez le règlement)");
-        
-      }
-      
+
+      msg.channel.bulkDelete(number);
+
     } else {
-  
+
     return;
-      
+
     }
 
   }
+
+}
 
 });
 
